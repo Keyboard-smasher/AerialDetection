@@ -1,0 +1,4 @@
+model:
+  config_path: yolo12n.yaml
+  save_onnx: True
+  save_tensorrt: True

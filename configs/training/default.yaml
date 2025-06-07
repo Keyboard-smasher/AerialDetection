@@ -1,0 +1,23 @@
+trainer:
+  max_epochs: 40
+  accelerator: auto
+  devices: auto
+  precision: 16-mixed
+
+train_hyp:
+  lr: 0.01
+
+logger:
+  save_dir: ${hydra:run.dir}
+  name: ${hydra:job.name}
+
+callback_checkpoint:
+  monitor: val_loss
+  mode: min
+  save_top_k: 1
+  filename: best
+
+callback_stopping:
+  monitor: val_loss
+  patience: 5
+  mode: min

@@ -1,0 +1,3 @@
+inference:
+  model_path: plots/2025-06-07/example/weights/best.pt
+  data_path: data/train/images/0000002_00448_d_0000015_jpg.rf.1b6a07e09eaecc1bd971e080495ceeba.jpg

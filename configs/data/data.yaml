@@ -1,0 +1,12 @@
+train: ../../data/train/images
+val: ../../data/valid/images
+
+nc: 6
+names: ["bicycle", "bus", "car", "motorcycle", "person", "truck"]
+
+roboflow:
+  workspace: aerial-person-detection
+  project: aerial-person-detection
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aerial-person-detection/aerial-person-detection/dataset/3

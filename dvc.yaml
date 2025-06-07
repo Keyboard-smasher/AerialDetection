@@ -1,0 +1,15 @@
+# dvc.yaml
+stages:
+  download:
+    cmd: |
+      gdown "https://drive.google.com/uc?id=1xvMomQPsryivq8C14cFku_2rmkXJ0B-8" -O archive.zip
+      echo "Download complete"
+    outs:
+      - archive.zip
+
+  unpack:
+    cmd: python src/unzip_data.py archive.zip datav2
+    deps:
+      - archive.zip
+    outs:
+      - datav2

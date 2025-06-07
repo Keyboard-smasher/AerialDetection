@@ -1,0 +1,6 @@
+config_path: yolo12n.yaml
+batch_size: 24
+lr: 0.01
+img_size: 640
+save_onnx: true
+save_tensorrt: true

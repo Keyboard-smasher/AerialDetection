@@ -1,0 +1,5 @@
+data:
+  data_yaml: configs/data/data.yaml
+  img_size: 640
+  batch_size: 24
+  num_workers: 8
