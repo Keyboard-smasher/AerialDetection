@@ -10,8 +10,6 @@ repos:
         args: [--maxkb=20120]
       - id: check-merge-conflict
       - id: check-case-conflict
-      - id: mixed-line-ending
-        args: [--fix=lf]
 
   # Python formatting
   - repo: https://github.com/psf/black
