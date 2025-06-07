@@ -46,10 +46,16 @@ project/
 uv sync
 ```
 
-2. **ВАЖНО! Для корректной работы обязательно выполнить следующую команду:**
+2. **Установить библиотеки которые почему то просто так не устанавливаются**
 
 ```bash
-uv pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+uv pip install dvc[gdrive] gdown pre-commit
+```
+
+3. Проверка хуков
+
+```bash
+pre-commit run -a
 ```
 
 ## Train
@@ -115,6 +121,7 @@ model.export(format="engine", device=0)  # device: GPU index
 
 ## Inference
 
+Во время подготовки данных также скачалась обученная моделька в папку plots. Ее можно использовать для инференса и валидации
 После настройки конфигов, достаточно запустить следующую команду:
 
 ```bash

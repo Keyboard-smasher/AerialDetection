@@ -1,5 +1,3 @@
-from pathlib import Path
-
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -42,7 +40,6 @@ class YOLOInference:
 def inference(cfg):
     # Example usage
     classes = ["bicycle", "bus", "car", "motorcycle", "person", "truck"]
-    print(Path(cfg.inference.inference.data_path).exists())
 
     infer = YOLOInference(cfg.inference.inference.model_path, classes)
     results = infer.predict(cfg.inference.inference.data_path)

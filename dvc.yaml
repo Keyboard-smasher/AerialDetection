@@ -8,8 +8,22 @@ stages:
       - archive.zip
 
   unpack:
-    cmd: python src/unzip_data.py archive.zip datav2
+    cmd: python src/unzip_data.py archive.zip data
     deps:
       - archive.zip
     outs:
-      - datav2
+      - data
+
+  download2:
+    cmd: |
+      gdown "https://drive.google.com/uc?id=1vtP-jKnv4DfmCYdjHEYl0Q9a2oS0civs" -O 2025-06-07.zip
+      echo "Download complete"
+    outs:
+      - 2025-06-07.zip
+
+  unpack2:
+    cmd: python src/unzip_data.py 2025-06-07.zip plots
+    deps:
+      - 2025-06-07.zip
+    outs:
+      - plots

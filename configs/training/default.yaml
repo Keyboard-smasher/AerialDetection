@@ -1,6 +1,6 @@
 trainer:
   max_epochs: 40
-  accelerator: auto
+  accelerator: gpu
   devices: auto
   precision: 16-mixed
 
